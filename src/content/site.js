@@ -3,7 +3,7 @@ export const site = {
     title: "System-oriented Fullstack Developer",
     tagline: "API 설계 · 업무 시스템 · 실시간 데이터 연동",
     links: {
-        email: "mailto:you@example.com",
+        email: "mailto:legna1592@gmail.com",
     },
     nav: [
         { id: "projects", label: "Projects" },

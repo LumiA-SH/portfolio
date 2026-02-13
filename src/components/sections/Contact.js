@@ -10,7 +10,7 @@ export function Contact() {
                 <div className="card" style={{ padding: 22 }}>
                     <SectionHeader
                         title="Contact"
-                        desc="프로젝트/외주 문의는 이메일로 연락 주세요. 간단한 요구사항만 적어도 OK."
+                        desc="프로젝트/외주 문의는 이메일로 연락 주세요. 간단한 요구사항만 적어도 괜찮습니다."
                     />
 
                     <div style={{ display: "flex", gap: 10, marginTop: 18, flexWrap: "wrap" }}>
