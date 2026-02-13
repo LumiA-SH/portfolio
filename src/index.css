@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -670,3 +675,41 @@ body{
     to{ opacity:1; transform: translateY(0) scale(1); }
 }
 
+.skill-category{
+    margin-top:40px;
+}
+
+.skill-category-title{
+    margin-bottom:20px;
+    font-size:18px;
+    font-weight:600;
+    opacity:0.8;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap:20px;
+}
+
+.skill-card{
+    text-align:center;
+    padding:18px;
+    border-radius:12px;
+    background:rgba(255,255,255,0.04);
+    transition:0.2s ease;
+}
+
+.skill-card:hover{
+    transform:translateY(-4px);
+}
+
+.skill-icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.skill-name{
+    font-size:14px;
+    opacity:0.8;
+}

@@ -1,14 +1,14 @@
+// src/content/site.js
 export const site = {
     name: "LumiA",
     title: "System-oriented Fullstack Developer",
     tagline: "API 설계 · 업무 시스템 · 실시간 데이터 연동",
-    links: {
-        email: "mailto:legna1592@gmail.com",
-    },
+    desc: "산업 시스템(MES/ERP)과 웹 애플리케이션을 모두 다루며, API/데이터 흐름 중심의 설계를 선호합니다.",
+
     nav: [
+        { id: "about", label: "About" },
+        { id: "skills", label: "Skills" },
         { id: "projects", label: "Projects" },
-        { id: "architecture", label: "Architecture" },
-        { id: "stack", label: "Stack" },
         { id: "contact", label: "Contact" },
     ],
     expertise: [
@@ -19,99 +19,148 @@ export const site = {
         { title: "Stability & Ops", desc: "서버 이슈 대응, 현장 장애 처리 경험" },
         { title: "Security & Network", desc: "네트워크/보안 관점의 설계 및 운영 이해" },
     ],
-        projects: [
+
+    links: {
+        email: "mailto:legna1592@gmail.com",
+        // 아래는 선택
+        // phone: "tel:01012345678",
+        // sms: "sms:01012345678",
+    },
+
+    skills: {
+        intro:
+            "산업 설비 데이터 연동부터 웹 애플리케이션까지, 실무 환경에서 동작하는 시스템을 설계·구현합니다.",
+        categories: [
             {
-                name: "MES – 실시간 용접기 관리 시스템",
-                oneLiner:
-                    "산업 현장 설비 데이터를 수집·가공하여 공정 및 대시보드에 제공하는 실시간 시스템 개발",
-                highlights: [
-                    "용접기 가동 유무, 출력, 누적 사용시간 데이터 처리",
-                    "공정 단계별 설비 사용 이력 관리 구조 설계",
-                    "MS-SQL 기반 집계 및 통계 처리",
-                    "운영 중 서버 장애 발생 시 현장 대응 및 안정화",
+                title: "Core",
+                items: [
+                    { key: "java", label: "Java" },
+                    { key: "spring", label: "Spring Boot" },
+                    { key: "csharp", label: "C#" },
+                    { key: "mssql", label: "MS-SQL" },
+                    { key: "Oracle", label: "Oracle" },
                 ],
-                stack: ["C#", "MS-SQL", "Real-time Data", "MES"],
-                note: "다수 기업 납품 프로젝트. 내부 시스템으로 라이브 및 캡처 공개 불가.",
-                mediaPolicy:
-                    "고객 맞춤형 내부 시스템(보안/계약)으로 캡처 및 라이브 공개 불가. 요청 시 구조/역할 중심 설명 가능.",
             },
-
             {
-                name: "QR 코드 기반 현장 데이터 수집 시스템 (QrRegSystem)",
-                oneLiner:
-                    "QR 인식 → 데이터 파싱 → 서버 전송 → DB 저장까지 이어지는 현장 입력/적재 시스템 개발",
-                highlights: [
-                    "QR 코드 인식 및 데이터 파싱 로직 구현",
-                    "서버 API 연동 및 DB 저장 처리",
-                    "현장 입력 흐름(검증/중복/오입력 방지) 고려",
+                title: "Backend",
+                items: [
+                    { key: "node", label: "Node.js" },
+                    { key: "dotnet", label: ".NET" },
+                    { key: "rest", label: "REST API" },
                 ],
-                stack: ["Android", "C++", "MS-SQL", "API Integration"],
-                note: "기업 내부 운영용으로 라이브/캡처 공개 범위 제한.",
-                mediaPolicy:
-                    "내부 운영 시스템 특성상 캡처/라이브 공개가 제한됩니다. 요청 시 구조/역할 중심 설명 가능.",
             },
-
-
             {
-                name: "Z.do – 라이브 운영 웹 (PHP)",
-                oneLiner:
-                    "현재 운영 중인 웹 서비스 개발 및 유지보수",
-                highlights: [
-                    "웹 기능 개발 및 데이터 처리 로직 구현",
-                    "DB 연동 및 운영 이슈 대응",
-                    "실서비스 환경에서의 유지보수 경험",
+                title: "Frontend",
+                items: [
+                    { key: "react", label: "React" },
+                    { key: "js", label: "JavaScript" },
+                    { key: "html", label: "HTML5" },
+                    { key: "css", label: "CSS3" },
                 ],
-                stack: ["PHP", "JavaScript", "Web", "DB"],
-                links: {
-                    live: "https://zdo.co.kr/",
-                },
-                note: "현재 라이브 운영 중.",
             },
-
             {
-                name: "GPS 데이터 → DB 저장 → 블록체인 연동 시스템",
-                oneLiner:
-                    "GPS 데이터를 저장 후 블록체인으로 연계하는 데이터 파이프라인 구조 개발",
-                highlights: [
-                    "GPS 데이터 수집 및 서버 적재 구조 구현",
-                    "DB 저장 후 블록체인 연동 흐름 설계",
-                    "데이터 이동 및 무결성 관점 설계",
+                title: "Infra",
+                items: [
+                    { key: "git", label: "Git" },
+                    { key: "github", label: "GitHub" },
+                    { key: "windows", label: "Windows" },
                 ],
-                stack: ["JavaScript", "React", "AWS", "Data Pipeline"],
-                note: "블록체인 파트는 현재 종료/비공개.",
-                mediaPolicy:
-                    "캡처는 일부 보유하고 있으나 공개 범위가 제한적입니다. 요청 시 구조/역할 중심 설명 가능.",
-            },
-
-            {
-                name: "창원 지적 아카이브 – 공공 포털 개발",
-                oneLiner:
-                    "공공기관 메인 포털 개발 참여 (전자정부 프레임워크 기반)",
-                highlights: [
-                    "E-gov Framework 기반 포털 기능 개발",
-                    "Oracle DB 연동",
-                    "공공 시스템 환경에서의 개발 및 운영 경험",
-                ],
-                stack: ["Java", "JSP", "E-gov", "Oracle"],
-                note: "현재 라이브 서비스는 종료되었으며 일부 캡처만 보존.",
-                mediaPolicy:
-                    "서비스 종료로 인해 라이브 확인 불가. 보존된 일부 화면 캡처만 제공 가능.",
-            },
-
-            {
-                name: "씨스원 – 웹사이트 개발/유지보수 (React)",
-                oneLiner:
-                    "기업 웹사이트 신규 개발 및 기능 유지보수",
-                highlights: [
-                    "React 기반 페이지/컴포넌트 개발",
-                    "MS-SQL 연동",
-                    "기존 기능 유지보수 및 개선",
-                ],
-                stack: ["React", "JavaScript", "MS-SQL"],
-                note: "관리자 페이지는 별도 개발 범위에 포함되지 않음.",
             },
         ],
+    },
 
+    projects: [
+        {
+            name: "MES – 실시간 용접기 관리 시스템",
+            oneLiner:
+                "산업 현장 설비 데이터를 수집·가공하여 공정 및 대시보드에 제공하는 실시간 시스템 개발",
+            highlights: [
+                "용접기 가동 유무, 출력, 누적 사용시간 데이터 처리",
+                "공정 단계별 설비 사용 이력 관리 구조 설계",
+                "MS-SQL 기반 집계 및 통계 처리",
+                "운영 중 서버 장애 발생 시 현장 대응 및 안정화",
+            ],
+            stack: ["C#", "MS-SQL", "Real-time Data", "MES"],
+            note: "다수 기업 납품 프로젝트. 내부 시스템으로 라이브 및 캡처 공개 불가.",
+            mediaPolicy:
+                "고객 맞춤형 내부 시스템(보안/계약)으로 캡처 및 라이브 공개 불가. 요청 시 구조/역할 중심 설명 가능.",
+        },
+
+        {
+            name: "QR 코드 기반 현장 데이터 수집 시스템 (QrRegSystem)",
+            oneLiner:
+                "QR 인식 → 데이터 파싱 → 서버 전송 → DB 저장까지 이어지는 현장 입력/적재 시스템 개발",
+            highlights: [
+                "QR 코드 인식 및 데이터 파싱 로직 구현",
+                "서버 API 연동 및 DB 저장 처리",
+                "현장 입력 흐름(검증/중복/오입력 방지) 고려",
+            ],
+            stack: ["Android", "C++", "MS-SQL", "API Integration"],
+            note: "기업 내부 운영용으로 라이브/캡처 공개 범위 제한.",
+            mediaPolicy:
+                "내부 운영 시스템 특성상 캡처/라이브 공개가 제한됩니다. 요청 시 구조/역할 중심 설명 가능.",
+        },
+
+
+        {
+            name: "Z.do – 라이브 운영 웹 (PHP)",
+            oneLiner:
+                "현재 운영 중인 웹 서비스 개발 및 유지보수",
+            highlights: [
+                "웹 기능 개발 및 데이터 처리 로직 구현",
+                "DB 연동 및 운영 이슈 대응",
+                "실서비스 환경에서의 유지보수 경험",
+            ],
+            stack: ["PHP", "JavaScript", "Web", "DB"],
+            links: {
+                live: "https://zdo.co.kr/",
+            },
+            note: "현재 라이브 운영 중.",
+        },
+
+        {
+            name: "GPS 데이터 → DB 저장 → 블록체인 연동 시스템",
+            oneLiner:
+                "GPS 데이터를 저장 후 블록체인으로 연계하는 데이터 파이프라인 구조 개발",
+            highlights: [
+                "GPS 데이터 수집 및 서버 적재 구조 구현",
+                "DB 저장 후 블록체인 연동 흐름 설계",
+                "데이터 이동 및 무결성 관점 설계",
+            ],
+            stack: ["JavaScript", "React", "AWS", "Data Pipeline"],
+            note: "블록체인 파트는 현재 종료/비공개.",
+            mediaPolicy:
+                "캡처는 일부 보유하고 있으나 공개 범위가 제한적입니다. 요청 시 구조/역할 중심 설명 가능.",
+        },
+
+        {
+            name: "창원 지적 아카이브 – 공공 포털 개발",
+            oneLiner:
+                "공공기관 메인 포털 개발 참여 (전자정부 프레임워크 기반)",
+            highlights: [
+                "E-gov Framework 기반 포털 기능 개발",
+                "Oracle DB 연동",
+                "공공 시스템 환경에서의 개발 및 운영 경험",
+            ],
+            stack: ["Java", "JSP", "E-gov", "Oracle"],
+            note: "현재 라이브 서비스는 종료되었으며 일부 캡처만 보존.",
+            mediaPolicy:
+                "서비스 종료로 인해 라이브 확인 불가. 보존된 일부 화면 캡처만 제공 가능.",
+        },
+
+        {
+            name: "씨스원 – 웹사이트 개발/유지보수 (React)",
+            oneLiner:
+                "기업 웹사이트 신규 개발 및 기능 유지보수",
+            highlights: [
+                "React 기반 페이지/컴포넌트 개발",
+                "MS-SQL 연동",
+                "기존 기능 유지보수 및 개선",
+            ],
+            stack: ["React", "JavaScript", "MS-SQL"],
+            note: "관리자 페이지는 별도 개발 범위에 포함되지 않음.",
+        },
+    ],
     stackGroups: [
         { group: "Frontend", items: ["React", "Responsive UI", "Component Architecture"] },
         { group: "Backend", items: ["REST API Design", "Data Processing", "Auth/Permission Modeling"] },
@@ -124,5 +173,5 @@ export const site = {
         { step: "03", title: "구현", desc: "우선순위 기반으로 기능을 쌓고 주기적으로 공유합니다." },
         { step: "04", title: "테스트·배포", desc: "로그/예외를 정리하고 안정적으로 배포합니다." },
         { step: "05", title: "유지보수", desc: "운영 이슈 대응 및 개선을 진행합니다." },
-    ],
+    ]
 };

@@ -12,7 +12,7 @@ export function Expertise() {
                 />
 
                 <div className="grid-cards">
-                    {site.expertise.map((x) => (
+                    {(site.expertise ?? []).map((x) => (
                         <div key={x.title} className="card card--hover" style={{ padding: 18 }}>
                             <div style={{ fontWeight: 750 }}>{x.title}</div>
                             <div className="muted" style={{ marginTop: 10, lineHeight: 1.7 }}>

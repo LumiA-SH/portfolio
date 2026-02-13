@@ -7,6 +7,7 @@ import { Architecture } from "./components/sections/Architecture";
 import { Stack } from "./components/sections/Stack";
 import { Process } from "./components/sections/Process";
 import { Contact } from "./components/sections/Contact";
+import { Skills } from "./components/sections/Skills";
 
 export default function App() {
   return (
@@ -15,7 +16,8 @@ export default function App() {
         <main>
           <Hero />
           <Expertise />
-          <Projects />
+            <Skills />
+            <Projects />
           <Architecture />
           <Stack />
           <Process />
